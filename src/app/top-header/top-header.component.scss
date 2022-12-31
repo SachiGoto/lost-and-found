@@ -1,0 +1,32 @@
+.header-container{
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1477EC;
+}
+
+.header-logo{
+  width: 20%;
+  a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: color .2s;
+  }
+  a:hover{
+    color: #165bb0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo{
+    width: 50%;
+    a{
+      font-size: .8rem;
+
+    }
+
+  }
+}

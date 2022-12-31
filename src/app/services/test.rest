@@ -1,0 +1,13 @@
+PUT https://cms.yukayamamoto.me/api/lost-and-founds/1
+Content-Type: application/json
+
+{
+  "data":{
+
+    "Close":false
+
+  }
+}
+
+###
+GET https://cms.yukayamamoto.me/api/lost-and-founds/1

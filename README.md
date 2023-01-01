@@ -33,15 +33,16 @@
   </ol>
 </details>
  
- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+
  
 ## About The Project
 <img src="https://media.giphy.com/media/KUSzhGOqjj9lsgaOP8/giphy.gif" width="500" />
 
-This lost and found web app is for reporting lost or found items. You can upload an image of a found item and edit the item after it’s posted. 
-In this app, you can view posts, post found items, edit items and deactivate posts once items are claimed.
+This lost and found web app is for reporting lost items. You can upload an image of a found item and edit the item after it’s posted. 
+In this app, you can view posts (lost items), submit and edit posts, and deactivate posts once items are claimed.
 
 ## Technologies
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 <div style="display:inline-flex;>
 <img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" width="50" />
 <img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" width="50" />
@@ -56,7 +57,7 @@ In this app, you can view posts, post found items, edit items and deactivate pos
 <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" />
 </div>
 
-<p>We used Cloudinary so that images will be stored in the cloud. Also Cloudinary provide an URL for each image so we can store the URLs in our database instead of image itself which reduce the amount of data. 
+<p>Images are stored in the cloud using Cloudinary. It provides an URL for each image so we only store the URLs in the database instead of image themselves. This significantly reduces the amount of data stored. 
 
 We used MongoDB. One of the biggest reasons is MongoDB is easy to host with Heroku as well as connect to Cloudinary.</p>
 
@@ -67,6 +68,7 @@ We used MongoDB. One of the biggest reasons is MongoDB is easy to host with Hero
 <li>Add item form </li> 
 
 <li>Edit item form </li>
+          
 <img src="https://media.giphy.com/media/BiJJi0ehHXjrp6p0n5/giphy.gif" width="500"/>
 
 <li>On the edit item form, the current image will be updated in the form as soon as you select a different image</li>
@@ -74,17 +76,18 @@ We used MongoDB. One of the biggest reasons is MongoDB is easy to host with Hero
 
 <li>Claim button - Clicking the claimed button will disable the item so that no one can claim the item again</li>
 
-<h3> Features to implement in the future </h3>
+<h3>Features to implement in the future </h3>
 
-<li>log in, sign up system </li>
-<li>Able to post Lost items </li>
-<li>People should be able to edit only items that they posted but not others </li>
-<li>Search bar </li>
+<li>Login with Auth</li>
+<li>Functionality for logged in users to post lost items</li>
+<li>Edit only items linked to profile</li>
+<li>Search bar</li>
 <li>Categories</li>
 
 ## Challenges
 
-Passing Dataform and Databody with Angular to the server. 
+<p>Passing Dataform and Databody with Angular to the server was one of the primary challenges. We discovered that we can append values with dataform so that we can pass dataform and databody together! </p>
+<img width="300" alt="Screenshot 2022-12-31 at 7 15 03 PM" src="https://user-images.githubusercontent.com/70562492/210160084-591a4dc4-4735-4a11-b980-1b28ac231837.png">
 
 
 ## Getting Started
@@ -103,6 +106,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
 
 ### Running end-to-end tests
 

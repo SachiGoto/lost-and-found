@@ -85,7 +85,7 @@ export class LostEditComponent implements OnInit {
 
   submit() {
     const formdata = new FormData();
-    // FormData is predefied method
+    // FormData is predefined method
     formdata.append("image", this.filename);
     formdata.append("title", this.title);
     formdata.append("location", this.location);

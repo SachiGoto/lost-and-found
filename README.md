@@ -2,8 +2,8 @@
 
 # Lost and Found App Vancouver
 
-
 <img src="https://res.cloudinary.com/vanarts-webdev/image/upload/v1672535776/Screenshot_2022-12-31_at_5.14.43_PM_g7htuf.png" height="500" />
+
 
  <a href="https://lost-and-found.sachigoto.me/">View Demo</a>
  
@@ -36,6 +36,7 @@
  This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
  
 ## About The Project
+<img src="https://media.giphy.com/media/KUSzhGOqjj9lsgaOP8/giphy.gif" width="500" />
 
 This lost and found web app is for reporting lost or found items. You can upload an image of a found item and edit the item after it’s posted. 
 In this app, you can view posts, post found items, edit items and deactivate posts once items are claimed.
@@ -66,9 +67,10 @@ We used MongoDB. One of the biggest reasons is MongoDB is easy to host with Hero
 <li>Add item form </li> 
 
 <li>Edit item form </li>
+<img src="https://media.giphy.com/media/BiJJi0ehHXjrp6p0n5/giphy.gif" width="500"/>
 
 <li>On the edit item form, the current image will be updated in the form as soon as you select a different image</li>
-<iframe src="https://giphy.com/embed/NcgGFsthaGyqrIWBo6" width="480" height="402" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<img src="https://media.giphy.com/media/NcgGFsthaGyqrIWBo6/giphy.gif" />
 
 <li>Claim button - Clicking the claimed button will disable the item so that no one can claim the item again</li>
 

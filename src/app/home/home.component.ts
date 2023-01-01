@@ -16,6 +16,10 @@ export class HomeComponent implements OnInit {
   // postDates:any = [];
   dateString:any = [];
   claim:boolean = false;
+  claimStatus = false;
+  localStorage:any;
+  
+
   public isCollapsed: boolean[] = [];
 
   constructor(private cs:CommonService) { }
@@ -29,36 +33,93 @@ export class HomeComponent implements OnInit {
   }
 
   claimItem(description:any, listcontainer:any, id:string){
+  //   let claimStatus;
+  //  if(this.claim){
+  //    claimStatus = "false"
+      
+  //  }else{
+  //   claimStatus = "true"
+  //  }
+
+   const item = {
+    itemID: id,
+    claimStatus: true,
+}
+
+const itemID = id; 
+
+window.localStorage.setItem(itemID, JSON.stringify(item));
+this.localStorage = localStorage.getItem("item");
+
+console.log("local storage is ", this.localStorage)
+
+
+
+
+// this.claim = item.claimStatus;
+
+
+
     if(description.style.display == "block"){
       description.style.display = "none"; // example: "#f00"
     }else{
       description.style.display = "block";
     }
 
-    this.claim = !this.claim;
+    // this.claim = !this.claim;
 
-    if(this.claim === true){
-      listcontainer.style.filter = "grayscale(1)";
-      listcontainer.style.pointerEvents = "none";
-    } else {
-      listcontainer.style.backgroundColor = "";
-    }
+  // this.claimStatus = true;
+  listcontainer.style.filter = "grayscale(1)";
+  listcontainer.style.pointerEvents = "none";
 
-    this.cs.claim(id).subscribe(res => {
-      console.log("Claim completed");
-    })
+    // if(this.claim === true){
+    //   listcontainer.style.filter = "grayscale(1)";
+    //   listcontainer.style.pointerEvents = "none";
+    // } else {
+    //   listcontainer.style.backgroundColor = "";
+    // }
+
+    // this.cs.claim(id).subscribe(res => {
+    //   console.log("Claim completed");
+    // })
+   
   }
+
+
+
 
   ngOnInit(): void {
     this.cs.getAllposts().subscribe(posts =>{
       this.posts = posts;
       this.posts = this.posts.sort((x:any,y:any)=> x.date > y.date?-1:1)
+     
+
       for(let i = 0; i < this.posts.length; i++) {
         this.dateString.push(new Date(this.posts[i].date).toDateString());
-        console.log(this.dateString)
+        if(this.localStorage != null) {
+          // get the id of found item
+     
+          console.log("json local storage " , JSON.parse(this.localStorage))
+          
+  
+          // update UI of find item to show it has been found
+  
+        }
+        
+      
       }
+
       console.log("All data: ", this.posts);
    })
+
+   
+
+
+ 
+    
+  
+
+
   }
 
 

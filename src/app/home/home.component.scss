@@ -26,8 +26,11 @@
 }
 
 .instruction {
-  text-align: center;
+  // text-align: center;
   font-size: 20px;
+  width:70%;
+  margin: 0 auto;
+
 }
 
 .submitBtn_wrapper{
@@ -59,6 +62,11 @@
 .black {
   background-color: red !important;
   filter: saturate(70%);
+}
+
+.deactivate{
+  filter : grayscale(1);
+  pointer-events : "none";
 }
 
 .listContainer{
@@ -136,6 +144,8 @@
 
     }
   }
+
+ 
   .itemCard:hover{
     border: 3px solid blue;
   }

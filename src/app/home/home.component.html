@@ -2,13 +2,13 @@
   <h1 class="heading">Lost and Found</h1>
   <div class="submitBtn_wrapper">
     <a href="#" routerLink="/lostInput">
-      <button class="btn submitButton">Submit Found Item</button>
+      <button class="btn submitButton">Report A Found Item</button>
     </a>
   </div>
 </div>
 <div class="mainContainer">
-  <p class="instruction">Did you lost somethig? You can check the item and contact the person who found!</p>
-  <section class="listContainer" *ngFor="let post of posts; let i = index"><!--ngfor loop-->
+  <p class="instruction"> Have you lost your item? Someone may have found your lost item! Check our lost and found app to see if your item has been reported lost! <br> If you have found an item, click the report a found item above to report an item!  </p>
+  <section class="listContainer" *ngFor="let post of posts; let i = index" [class.deactivate]="claimStatus"><!--ngfor loop-->
     <div #listcontainer class="itemCard"><!--conditional class lost or found?-->
       <div class="row">
         <div class="col-lg-6">
@@ -44,7 +44,7 @@
           <!-- <div class="contactBtn_wrapper">
             <button (click)="getInfo(contactInfo)" class="btn">Contact Information</button>
           </div> -->
-          <div class="card-container">
+          <div class="card-container"  >
             <div class="float-layout">
               <div class="contactName">
                 <span class="bold">Contact Name:</span>

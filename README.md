@@ -121,5 +121,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## License 
 
 
-[Webside](https://lost-and-found.sachigoto.me/).
+[Website](https://lost-and-found.sachigoto.me/)
 
